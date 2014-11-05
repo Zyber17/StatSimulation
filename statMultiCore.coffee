@@ -22,8 +22,8 @@ if cluster.isMaster
 
 		#process.stdout.write "#{i}"
 
-		if i % 100000000 == 0
-			process.stdout.write "iterations: #{i/1000000} million,	average: #{i/n}\n"
+		if i % 600000000 == 0
+			process.stdout.write "iterations: #{i/1000000000} billion,	average: #{i/n}\n"
 
 	Object.keys(cluster.workers).forEach (id) ->
  	   cluster.workers[id].on 'message', messageHandler
